@@ -42,7 +42,7 @@ async function login(req, res){
       return res.status(401).json({ error: 'contraseña incorrecta' });
     }
     
-    const token = jwt.sign({id: user.id, username: user.username}, process.env.ACCESS_KEY,{ expiresIn: '5h' } )
+    const token = jwt.sign({id: user.id, username: user.username}, '@eX+9$x2hdF83!k^V$z',{ expiresIn: '5h' } )
     return res.status(200).json({message: "Token generado expira en 5 horas", token: token})
   } catch (error) {
     console.log(error);

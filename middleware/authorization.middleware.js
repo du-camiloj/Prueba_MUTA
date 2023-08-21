@@ -10,7 +10,7 @@ async function auth(req, res, next){
       return res.status(401).json({ error: 'Acceso no autorizado' });
     }
     token = token.split(" ")[1];
-    jwt.verify(token, process.env.ACCESS_KEY); 
+    jwt.verify(token, '@eX+9$x2hdF83!k^V$z'); 
         
     next();
 
